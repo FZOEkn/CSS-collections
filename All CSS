@@ -1,0 +1,176 @@
+Elements (Selectors)
+* { } /* เลือกทุก element - เลือกทุกองค์ประกอบในหน้าเว็บ */
+div { } /* เลือกทุก div elements - เลือกทุก div บนหน้าเว็บ */
+div,p { } /* เลือกทุก div และ p elements - เลือกทั้ง div และ p พร้อมกัน */
+div p { } /* เลือก p elements ที่อยู่ใน div - เลือก p ที่อยู่ภายใน div ไม่ว่าจะลึกเท่าใด */
+div > p { } /* เลือก p elements ที่เป็นลูกโดยตรงของ div - เลือกเฉพาะ p ที่เป็นลูกชั้นแรกของ div */
+div + p { } /* เลือก p elements ที่อยู่ติดกับ div - เลือก p ที่อยู่ถัดจาก div ทันที */
+div ~ p { } /* เลือก p elements ทั้งหมดที่อยู่หลัง div - เลือก p ทุกตัวที่อยู่หลัง div และมีพ่อแม่เดียวกัน */
+.class { } /* เลือก elements ที่มี class="class" - เลือกองค์ประกอบที่มีคลาสเฉพาะ */
+#id { } /* เลือก element ที่มี id="id" - เลือกองค์ประกอบที่มี id เฉพาะ */
+[attr] { } /* เลือก elements ที่มี attr attribute - เลือกองค์ประกอบที่มีแอตทริบิวต์เฉพาะ */
+[attr=val] { } /* เลือก elements ที่มี attr="val" - เลือกองค์ประกอบที่มีแอตทริบิวต์พร้อมค่าเฉพาะ */
+
+สี (Colors)
+color: #ff0000; /* สีแบบ Hex code - ระบุสีด้วยรหัสฐานสิบหก (เช่น #ff0000 คือสีแดง) */
+color: rgb(255, 0, 0); /* สีแบบ RGB - ระบุสีด้วยค่าแดง เขียว น้ำเงิน ตั้งแต่ 0-255 */
+color: rgba(255, 0, 0, 0.5); /* สีแบบ RGBA - เหมือน RGB แต่เพิ่มค่าความโปร่งใส (0-1) */
+color: hsl(0, 100%, 50%); /* สีแบบ HSL - ระบุสีด้วยค่าเฉดสี (0-360) ความอิ่มตัว(%) และความสว่าง(%) */
+color: hsla(0, 100%, 50%, 0.5); /* สีแบบ HSLA - เหมือน HSL แต่เพิ่มค่าความโปร่งใส */
+color: red; /* สีตามชื่อ - ใช้ชื่อสีมาตรฐาน เช่น red, blue, green */
+
+ข้อความ (Text)
+font-family: Arial, sans-serif; /* กำหนดชนิดของฟอนต์ หากไม่มีฟอนต์แรกจะใช้ฟอนต์ถัดไป */
+font-size: 16px; /* กำหนดขนาดของตัวอักษร */
+font-weight: bold; /* กำหนดความหนาของตัวอักษร (normal, bold, 100-900) */
+font-style: italic; /* กำหนดรูปแบบของตัวอักษร (normal, italic) */
+text-align: center; /* จัดตำแหน่งของข้อความ (left, right, center, justify) */
+text-decoration: underline; /* การตกแต่งข้อความ (none, underline, line-through) */
+text-transform: uppercase; /* แปลงข้อความเป็นรูปแบบต่างๆ (capitalize, lowercase, uppercase) */
+line-height: 1.5; /* กำหนดความสูงของบรรทัด (1.5 เท่าของขนาดตัวอักษร) */
+letter-spacing: 2px; /* กำหนดระยะห่างระหว่างตัวอักษร */
+word-spacing: 5px; /* กำหนดระยะห่างระหว่างคำ */
+text-shadow: 2px 2px 5px #000000; /* เพิ่มเงาให้ข้อความ (แนวนอน แนวตั้ง การเบลอ สี) */
+white-space: nowrap; /* จัดการพื้นที่ว่างในข้อความ (normal, nowrap, pre) */
+
+พื้นหลัง (Background)
+background-color: #f0f0f0; /* กำหนดสีพื้นหลัง */
+background-image: url('image.jpg'); /* กำหนดรูปภาพพื้นหลัง */
+background-repeat: no-repeat; /* ควบคุมการทำซ้ำของรูปพื้นหลัง (repeat, repeat-x, repeat-y, no-repeat) */
+background-position: center center; /* กำหนดตำแหน่งของรูปพื้นหลัง (เช่น top left, center center) */
+background-size: cover; /* กำหนดขนาดของรูปพื้นหลัง (auto, cover, contain, หรือระบุขนาด) */
+background-attachment: fixed; /* กำหนดการเลื่อนของพื้นหลัง (scroll, fixed) */
+background: #f0f0f0 url('image.jpg') no-repeat center/cover; /* รวมคุณสมบัติพื้นหลังเป็นบรรทัดเดียว */
+
+การจัดวาง (Layout)
+display: block; /* กำหนดลักษณะการแสดงผล (none, inline, block, inline-block, flex, grid) */
+position: relative; /* กำหนดวิธีการจัดตำแหน่ง (static, relative, absolute, fixed, sticky) */
+top: 10px; /* ระยะห่างจากขอบบน (ใช้กับ position) */
+right: 10px; /* ระยะห่างจากขอบขวา (ใช้กับ position) */
+bottom: 10px; /* ระยะห่างจากขอบล่าง (ใช้กับ position) */
+left: 10px; /* ระยะห่างจากขอบซ้าย (ใช้กับ position) */
+float: left; /* ทำให้องค์ประกอบลอยไปทางซ้าย/ขวา (left, right, none) */
+clear: both; /* ควบคุมการลอยขององค์ประกอบ (left, right, both, none) */
+z-index: 1; /* กำหนดลำดับชั้นการซ้อนทับ (ค่ายิ่งมากยิ่งอยู่บน) */
+
+กล่อง (Box Model)
+width: 100px; /* กำหนดความกว้างขององค์ประกอบ */
+height: 100px; /* กำหนดความสูงขององค์ประกอบ */
+max-width: 100%; /* กำหนดความกว้างสูงสุด */
+min-width: 50px; /* กำหนดความกว้างต่ำสุด */
+max-height: 100%; /* กำหนดความสูงสูงสุด */
+min-height: 50px; /* กำหนดความสูงต่ำสุด */
+margin: 10px; /* กำหนดระยะห่างรอบนอก (บน ขวา ล่าง ซ้าย) */
+padding: 10px; /* กำหนดระยะห่างภายใน (บน ขวา ล่าง ซ้าย) */
+border: 1px solid black; /* กำหนดเส้นขอบ (ความหนา รูปแบบ สี) */
+border-radius: 5px; /* กำหนดความโค้งมนของขอบ */
+box-sizing: border-box; /* กำหนดวิธีคำนวณขนาด (content-box, border-box) */
+overflow: auto; /* จัดการเนื้อหาที่ล้นออกจากพื้นที่ (visible, hidden, scroll, auto) */
+
+Flexbox
+display: flex; /* เปิดใช้งาน Flexbox */
+flex-direction: row; /* กำหนดทิศทางการเรียง (row, column, row-reverse, column-reverse) */
+flex-wrap: wrap; /* กำหนดการขึ้นบรรทัดใหม่ (nowrap, wrap, wrap-reverse) */
+flex-flow: row wrap; /* รวม flex-direction และ flex-wrap */
+justify-content: center; /* จัดตำแหน่งตามแนวหลัก (flex-start, flex-end, center, space-between, space-around) */
+align-items: center; /* จัดตำแหน่งตามแนวขวาง (flex-start, flex-end, center, baseline, stretch) */
+align-content: center; /* จัดตำแหน่งแถวตามแนวขวาง (flex-start, flex-end, center, space-between, space-around, stretch) */
+order: 1; /* กำหนดลำดับการแสดงผล */
+flex-grow: 1; /* กำหนดอัตราการขยายของ flex item */
+flex-shrink: 1; /* กำหนดอัตราการหดของ flex item */
+flex-basis: auto; /* กำหนดขนาดเริ่มต้นของ flex item */
+flex: 1; /* รวม flex-grow, flex-shrink, flex-basis */
+align-self: center; /* กำหนดการจัดตำแหน่งเฉพาะ item */
+
+Grid
+display: grid; /* เปิดใช้งาน Grid */
+grid-template-columns: 100px 100px 100px; /* กำหนดความกว้างของคอลัมน์ */
+grid-template-rows: 100px 100px; /* กำหนดความสูงของแถว */
+grid-template-areas: "header header" "sidebar main" "footer footer"; /* กำหนดพื้นที่ด้วยชื่อ */
+grid-column-gap: 10px; /* กำหนดช่องว่างระหว่างคอลัมน์ */
+grid-row-gap: 10px; /* กำหนดช่องว่างระหว่างแถว */
+grid-gap: 10px 10px; /* รวม grid-row-gap และ grid-column-gap */
+grid-column: 1 / 3; /* กำหนดตำแหน่งและขนาดตามคอลัมน์ (เริ่ม / จบ) */
+grid-row: 1 / 3; /* กำหนดตำแหน่งและขนาดตามแถว (เริ่ม / จบ) */
+grid-area: main; /* กำหนดพื้นที่ด้วยชื่อ หรือ grid-area: แถวเริ่ม / คอลัมน์เริ่ม / แถวจบ / คอลัมน์จบ */
+
+การเปลี่ยนแปลง (Transforms)
+transform: translate(50px, 50px); /* เคลื่อนย้ายองค์ประกอบ (แนวนอน, แนวตั้ง) */
+transform: scale(1.5); /* ปรับขนาดองค์ประกอบ (1 = ขนาดปกติ, 2 = ใหญ่ขึ้น 2 เท่า) */
+transform: rotate(45deg); /* หมุนองค์ประกอบ (องศา) */
+transform: skew(10deg, 10deg); /* เอียงองค์ประกอบ (แนวนอน, แนวตั้ง) */
+transform: matrix(1, 0.5, 0.5, 1, 50, 50); /* ใช้เมทริกซ์เพื่อปรับแต่งแบบซับซ้อน */
+transform-origin: center center; /* กำหนดจุดศูนย์กลางของการเปลี่ยนแปลง */
+
+Animation และ Transition
+transition: property duration timing-function delay; /* รูปแบบเต็มของ transition */
+transition: all 0.3s ease 0s; /* เปลี่ยนแปลงทุกคุณสมบัติ นาน 0.3 วินาที ด้วยฟังก์ชัน ease ไม่มีดีเลย์ */
+
+@keyframes slidein { /* กำหนดแอนิเมชันชื่อ slidein */
+  from { transform: translateX(0); } /* สถานะเริ่มต้น */
+  to { transform: translateX(100px); } /* สถานะสุดท้าย */
+}
+
+animation-name: slidein; /* ชื่อแอนิเมชันที่จะใช้ */
+animation-duration: 3s; /* ระยะเวลาของแอนิเมชัน */
+animation-timing-function: ease-in; /* รูปแบบการเคลื่อนไหว */
+animation-delay: 1s; /* เวลารอก่อนเริ่มแอนิเมชัน */
+animation-iteration-count: infinite; /* จำนวนรอบการเล่น (ตัวเลขหรือ infinite) */
+animation-direction: alternate; /* ทิศทางการเล่น (normal, reverse, alternate, alternate-reverse) */
+animation-fill-mode: forwards; /* สถานะเมื่อสิ้นสุดแอนิเมชัน (none, forwards, backwards, both) */
+animation-play-state: running; /* สถานะการเล่น (running, paused) */
+animation: slidein 3s ease-in 1s infinite alternate forwards; /* รวมคุณสมบัติแอนิเมชันทั้งหมด */
+
+Media Queries
+@media screen and (max-width: 768px) { /* ใช้เมื่อหน้าจอมีความกว้างไม่เกิน 768px */
+  body {
+    background-color: lightblue; /* เปลี่ยนสีพื้นหลังเมื่อหน้าจอแคบ */
+  }
+}
+@media print { /* ใช้เมื่อพิมพ์หน้าเว็บ */
+  body {
+    font-size: 12pt; /* เปลี่ยนขนาดฟอนต์เมื่อพิมพ์ */
+  }
+}
+
+การจัดการกับ List
+list-style-type: disc; /* กำหนดรูปแบบสัญลักษณ์ของลิสต์ (none, disc, circle, square, decimal) */
+list-style-position: inside; /* กำหนดตำแหน่งของสัญลักษณ์ (inside, outside) */
+list-style-image: url('bullet.png'); /* ใช้รูปภาพเป็นสัญลักษณ์ */
+list-style: square inside url('bullet.png'); /* รวมคุณสมบัติลิสต์ทั้งหมด */
+
+การจัดการตาราง (Table)
+border-collapse: collapse; /* รวมเส้นขอบของเซลล์ในตาราง (separate, collapse) */
+border-spacing: 5px; /* กำหนดระยะห่างระหว่างเซลล์ (ใช้กับ border-collapse: separate) */
+caption-side: top; /* กำหนดตำแหน่งของคำอธิบายตาราง (top, bottom) */
+empty-cells: hide; /* กำหนดการแสดงเซลล์ว่าง (show, hide) */
+table-layout: fixed; /* กำหนดอัลกอริทึมการจัดตาราง (auto, fixed) */
+
+สิ่งอื่นๆ (Miscellaneous)
+opacity: 0.5; /* กำหนดความโปร่งใสของทั้งองค์ประกอบ (0-1) */
+visibility: hidden; /* กำหนดการมองเห็น (visible, hidden, collapse) */
+cursor: pointer; /* กำหนดรูปแบบเคอร์เซอร์เมาส์ (default, pointer, text, move, ฯลฯ) */
+box-shadow: 5px 5px 10px #888888; /* เพิ่มเงาให้กล่อง (แนวนอน แนวตั้ง การเบลอ สี) */
+filter: blur(5px); /* ใช้ฟิลเตอร์กับองค์ประกอบ (blur, brightness, contrast, ฯลฯ) */
+resize: both; /* อนุญาตให้ผู้ใช้ปรับขนาดองค์ประกอบ (none, both, horizontal, vertical) */
+user-select: none; /* ควบคุมการเลือกข้อความ (auto, none, text, all) */
+
+Variables (Custom Properties)
+:root { /* กำหนดตัวแปรที่ใช้ได้ทั่วทั้งเอกสาร */
+  --main-color: #ff0000; /* สร้างตัวแปร --main-color */
+}
+body {
+  color: var(--main-color); /* ใช้ตัวแปร --main-color */
+}
+
+ส่วนเติมแต่งขั้นสูง (Advanced)
+content: ""; /* เพิ่มเนื้อหาก่อนหรือหลังองค์ประกอบ (ใช้กับ ::before, ::after) */
+counter-reset: section; /* รีเซ็ตตัวนับชื่อ section */
+counter-increment: section; /* เพิ่มค่าตัวนับ section */
+content: counter(section); /* แสดงค่าตัวนับ section */
+will-change: transform; /* แจ้งเบราว์เซอร์เตรียมพร้อมสำหรับการเปลี่ยนแปลง */
+backdrop-filter: blur(5px); /* ใช้ฟิลเตอร์กับพื้นหลังขององค์ประกอบ */
+pointer-events: none; /* ควบคุมการตอบสนองต่อเมาส์ (auto, none) */
+
+
+
